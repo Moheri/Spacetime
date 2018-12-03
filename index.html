@@ -7,7 +7,7 @@
 	<title>Ar Aframe Base</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="css/normalize.min.css">
 	<link rel="stylesheet" href="css/main.css">
 
@@ -25,20 +25,38 @@
 <body>
 	<a-scene embedded arjs='patternRatio: 0.7'>
 		<a-assets>
+			<video id="profile-video" autoplay="true" loop="true" src="assets/profile-video.mp4"></video>
 		</a-assets>
 
 		<a-marker preset="custom" type="pattern" url="patterns/1.patt">
-<!-- 			<a-sphere color="white" radius="0.3" material="src:assets/beispiel360.jpeg" position="0 -3 0">
-				<a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0"
-				repeat="indefinite"></a-animation>
-			</a-sphere> -->
 
-			<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="0 0 0">
-				<a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0"
-				repeat="indefinite" easing="linear"></a-animation>
-			</a-sphere>
 
-<!-- 			<a-box position="0 0 0" color="tomato" depth="1" height="1" width="1"></a-box> -->
+ <!-- Fotokugeln -->
+			<a-entity position="-3 0 1">
+
+				<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="0 0 1.2">
+					<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
+					repeat="indefinite" easing="linear"></a-animation>
+				</a-sphere>
+
+				<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="0 0 0">
+					<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
+					repeat="indefinite" easing="linear"></a-animation>
+				</a-sphere>
+
+				<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="1.2 0 0">
+					<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
+					repeat="indefinite" easing="linear"></a-animation>
+				</a-sphere>
+
+			</a-entity>
+
+<!-- Video -->
+
+			<a-entity position="0 0 0 ">
+				  <a-video src="#profile-video" width="1" height="1.7" position="0 0 0" rotation="90 0 180"></a-video>
+			</a-entity>
+
 		</a-marker>
 
 		<!-- CAMERA -->
