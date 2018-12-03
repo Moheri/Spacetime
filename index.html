@@ -28,9 +28,14 @@
 		</a-assets>
 
 		<a-marker preset="custom" type="pattern" url="patterns/1.patt">
-			<a-sphere color="white" radius="0.3" material="src:assets/beispiel360.jpeg">
-				  <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0"
-               repeat="indefinite"></a-animation>
+			<a-sphere color="white" radius="0.3" material="src:assets/beispiel360.jpeg" position="0 -3 0">
+				<a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0"
+				repeat="indefinite"></a-animation>
+			</a-sphere>
+
+			<a-sphere color="white" radius="0.3" material="src:assets/beispiel360.jpeg" position="1 -2 0">
+				<a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0"
+				repeat="indefinite" easing="linear"></a-animation>
 			</a-sphere>
 		</a-marker>
 
