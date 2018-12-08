@@ -34,7 +34,7 @@
 
 		<a-marker preset="custom" type="pattern" url="patterns/1.patt">
 
-			<a-entity rotation="90 0 180" rounded="width:9.7; height:5; radius: 0.1; color: white; opacity:0.8" position="5 -0.867 2.8" anchor="center">
+			<a-entity rotation="90 0 180" rounded="width:9.7; height:5; radius: 0.1; color: #132636; opacity:0.8" position="5 -0.867 2.8" anchor="center">
 			</a-entity>
 				<!-- Fotokugeln -->
 				<a-entity position="-2 0 -0.5" rotation="90 0 180">
@@ -44,7 +44,7 @@
 							<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
 							repeat="indefinite" easing="linear"></a-animation>
 						</a-sphere>
-						<a-entity text="color: black; value: Berlin; align:center;" position="0 -0.7 0" scale="4 4 4" rotation="180 0 180"></a-entity>
+						<a-entity text="color: #1BD78E; value: Berlin; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0 -0.8 0" scale="4 4 4" rotation="180 0 180"></a-entity>
 					</a-entity>
 
 					<a-entity position="0 0 0">
@@ -52,14 +52,14 @@
 							<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
 							repeat="indefinite" easing="linear"></a-animation>
 						</a-sphere>
-						<a-entity text="color: black; value: Kenia; align:center;" position="0 -0.7 0" scale="4 4 4" rotation="180 0 180"></a-entity>
+						<a-entity text="color: #1BD78E; value: Kenia; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0 -0.8 0" scale="4 4 4" rotation="180 0 180"></a-entity>
 					</a-entity>
 
 						<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="1.2 0 0">
 							<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
 							repeat="indefinite" easing="linear"></a-animation>
 						</a-sphere>
-						<a-entity text="color:black; value: The Alps!; align:center;" position="1.2 -0.7 0" scale="4 4 4" rotation="180 0 180"></a-entity>
+						<a-entity text="color:#1BD78E; value: The Alps!; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="1.2 -0.8 0" scale="4 4 4" rotation="180 0 180"></a-entity>
 					</a-entity>
 				</a-entity>
 
@@ -74,9 +74,11 @@
     			</a-entity>
 
     <!-- Video -->
-    <a-entity id="profile-video" position="0 0 0">
-    	<a-video src="#profile-video" width="2" height="3.4" position="0 0 0" rotation="90 0 180"></a-video>
+    <a-entity id="profile-video" position="0 0 0" rotation="90 0 180">
+    	<a-video src="#profile-video" width="2" height="3.4" position="0 0 0" ></a-video>
     </a-entity>
+    <a-entity rotation="90 0 180" position="1.177 -0.167 1.822" rounded="width:2.3; height:3.713; radius: 0.1; color: white;"></a-entity>
+    <a-entity text="color:white; value: Miriam's Feed; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0.019 -0.204 2.603" scale="8 8 8" rotation="-90 0 0"></a-entity>
 </a-entity>
 </a-marker>
 
