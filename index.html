@@ -12,11 +12,13 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="js/vendor/jquery-1.11.2.min.js"></script>
 
 
 	<!-- AFRAME -->
 	<!-- include aframe -->
 	<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+	<script src="js/rounded.js"></script>
 	<script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
 	<!-- include ar.js -->
 	<script src="js/vendor/aframe/build/aframe-ar.js"></script>
@@ -25,47 +27,66 @@
 <body>
 	<a-scene embedded arjs='patternRatio: 0.7'>
 		<a-assets>
-			<video id="profile-video" autoplay="true" loop="true" src="assets/profile-video.mp4"></video>
+			<video id="profile-video" autoplay loop muted>
+				<source src="assets/profile-video.mp4" type="video/mp4" />
+			</video>
 		</a-assets>
 
 		<a-marker preset="custom" type="pattern" url="patterns/1.patt">
 
-
- <!-- Fotokugeln -->
-			<a-entity position="-3 0 1">
-
-				<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="0 0 1.2">
-					<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
-					repeat="indefinite" easing="linear"></a-animation>
-				</a-sphere>
-
-				<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="0 0 0">
-					<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
-					repeat="indefinite" easing="linear"></a-animation>
-				</a-sphere>
-
-				<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="1.2 0 0">
-					<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
-					repeat="indefinite" easing="linear"></a-animation>
-				</a-sphere>
-
+			<a-entity rotation="90 0 180" rounded="width:9.7; height:5; radius: 0.1; color: white; opacity:0.8" position="5 -0.867 2.8" anchor="center">
 			</a-entity>
+				<!-- Fotokugeln -->
+				<a-entity position="-2 0 -0.5" rotation="90 0 180">
 
-<!-- Video -->
+					<a-entity position="0 -1.5 0">
+						<a-sphere color="white" radius="0.5" material="src:assets/beispiel360-2.jpg">
+							<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
+							repeat="indefinite" easing="linear"></a-animation>
+						</a-sphere>
+						<a-entity text="color: black; value: Berlin; align:center;" position="0 -0.7 0" scale="4 4 4" rotation="180 0 180"></a-entity>
+					</a-entity>
 
-			<a-entity position="0 0 0 ">
-				  <a-video src="#profile-video" width="1" height="1.7" position="0 0 0" rotation="90 0 180"></a-video>
-			</a-entity>
+					<a-entity position="0 0 0">
+						<a-sphere color="white" radius="0.5" material="src:assets/beispiel360-3.jpeg" position="0 0 0">
+							<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
+							repeat="indefinite" easing="linear"></a-animation>
+						</a-sphere>
+						<a-entity text="color: black; value: Kenia; align:center;" position="0 -0.7 0" scale="4 4 4" rotation="180 0 180"></a-entity>
+					</a-entity>
 
-		</a-marker>
+						<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="1.2 0 0">
+							<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
+							repeat="indefinite" easing="linear"></a-animation>
+						</a-sphere>
+						<a-entity text="color:black; value: The Alps!; align:center;" position="1.2 -0.7 0" scale="4 4 4" rotation="180 0 180"></a-entity>
+					</a-entity>
+				</a-entity>
 
-		<!-- CAMERA -->
-		<a-entity camera position="0 0 0">
-		</a-entity>
+				<!-- Notiz -->
+				<a-entity rotation="90 0 180" position="3.3 0 0">
+					<a-entity rounded="width:2; height:1; radius: 0.1; color: #0092FF;">
+						<a-entity text="lineHeight: 50; color: white; value: Have a nice day @ \nhome! Miss you! \n<3; anchor: left; align: left;" rotation="180 0 180" position="1.9 0.6 -0.1" font="roboto" scale="4 4 4">
+						</a-entity>
+					</a-entity>
+					<a-box position="1.5 -0.2 0" color="white" depth=".2" height="0.3" width="0.8" material="src:assets/reply-button.png;"></a-box>
+    				</a-entity>
+    			</a-entity>
 
-	</a-scene>
+    <!-- Video -->
+    <a-entity id="profile-video" position="0 0 0">
+    	<a-video src="#profile-video" width="2" height="3.4" position="0 0 0" rotation="90 0 180"></a-video>
+    </a-entity>
+</a-entity>
+</a-marker>
 
-	<script src="js/main.js"></script>
+<!-- CAMERA -->
+<a-entity camera position="0 0 0">
+</a-entity>
+
+</a-scene>
+
+<script src="js/main.js"></script>
 </body>
 
 </html>
