@@ -82,4 +82,3 @@ if(document.querySelector("a-marker").object3D.visible == true){
 	replyButton.getObject3D('mesh').material = new THREE.MultiMaterial(materials);	
 }
 
-
