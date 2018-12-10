@@ -51,3 +51,13 @@ kugel1.addEventListener('click', function(evt) {
 	 zoomIn($("#kugel1"));
 });
 
+var kugel2 = $("#kugel2")[0];
+kugel2.addEventListener('click', function(evt) {
+	 zoomIn($("#kugel2"));
+});
+
+var kugel3 = $("#kugel3")[0];
+kugel3.addEventListener('click', function(evt) {
+	 zoomIn($("#kugel3"));
+});
+
