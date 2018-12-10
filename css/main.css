@@ -13,8 +13,12 @@ body {
   background: #fff;
   border-radius: 100%;
   display: none;
-  width: 40px;
-  height: 40px; }
+  width: 70px;
+  height: 70px;
+  background-image: url(../assets/close.svg);
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 #panorama {
   position: fixed;

@@ -51,3 +51,32 @@ kugel1.addEventListener('click', function(evt) {
 	 zoomIn($("#kugel1"));
 });
 
+var kugel2 = $("#kugel2")[0];
+kugel2.addEventListener('click', function(evt) {
+	 zoomIn($("#kugel2"));
+});
+
+var kugel3 = $("#kugel3")[0];
+kugel3.addEventListener('click', function(evt) {
+	 zoomIn($("#kugel3"));
+});
+
+
+
+
+
+/* Button */
+var texture = new THREE.TextureLoader().load( 'assets/reply-button.png' );
+
+var materials = [
+  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // right
+  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // left
+  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // top
+  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // bottom
+  new THREE.MeshBasicMaterial( { map: texture } ), // back
+  new THREE.MeshBasicMaterial( { color: 0xffff00 } )  // front
+];
+
+
+var replyButton = $("#reply-button")[0];
+replyButton.getObject3D('mesh').material = new THREE.MultiMaterial(materials);
