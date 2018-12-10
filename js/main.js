@@ -95,13 +95,13 @@ var playButton = $("#play")[0];
 playButton.addEventListener('click', function(evt) {
 
 	if(audioIsPlaying == false){
-		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 180 0" class="rotationAni"></a-animation>');
+		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 90 -90" class="rotationAni"></a-animation>');
 		audio.play();
 		audioIsPlaying = true;
 	}else{
 		audio.pause();
 		audioIsPlaying = false;
-		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 0 0" class="rotationAni"></a-animation>');
+		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 -90 -90" class="rotationAni"></a-animation>');
 	}
 
 });
