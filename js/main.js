@@ -74,7 +74,7 @@ var materials = [
   new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // top
   new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // bottom
   new THREE.MeshBasicMaterial( { map: texture } ), // back
-  new THREE.MeshBasicMaterial( { color: 0xffff00 } )  // front
+  new THREE.MeshBasicMaterial( { map: texture } )  // front
 ];
 
 
