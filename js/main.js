@@ -109,3 +109,29 @@ playButton.addEventListener('click', function(evt) {
 
 
 
+
+
+
+
+
+
+
+
+verifyMarker() {
+    //var amarker = this.$refs.amarker; // vuejs
+    var amarker = document.querySelector("#amarker")
+    if(amarker.object3D.visible == true) {
+        console.log('marker is visible');
+    }
+    else {
+        console.log('marker is lost');
+    }
+}
+
+setInterval(verifyMarker, 1000);
+
+
+
+
+
+
