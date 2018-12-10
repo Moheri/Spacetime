@@ -66,7 +66,7 @@ kugel3.addEventListener('click', function(evt) {
 /* Button */
 var mainMarker = document.getElementById("mainMarker");
 mainMarker.addEventListener("markerFound", function(){
-	console.log("model is da")
+	console.log("------------------model is da")
 }, false);
 
 
