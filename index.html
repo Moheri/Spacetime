@@ -26,7 +26,7 @@
 	<script src="js/vendor/jquery-1.11.2.min.js"></script>
 	<!-- include ar.js -->
 	<script src="js/vendor/aframe/build/aframe-ar.js"></script>
-</head>+
+</head>
 
 <body>
 	<a-scene embedded arjs='patternRatio: 0.7'>
@@ -39,7 +39,7 @@
 				</audio>
 			</a-assets>
 
-			<a-marker-camera cursor="rayOrigin: mouse" preset="custom" type="pattern" url="patterns/7.patt">
+			<a-marker-camera id="mainMarker" cursor="rayOrigin: mouse" preset="custom" type="pattern" url="patterns/1.patt">
 
 				<a-entity rotation="90 0 180" rounded="width:9.7; height:5; radius: 0.1; color: #132636; opacity:0.8" position="5 -0.867 2.8" anchor="center"></a-entity>
 				<!-- Fotokugeln -->
@@ -79,11 +79,12 @@
 					</a-entity>
 
 				</a-entity>
-				<a-box id="reply-button" position="1.5 -0.2 0" color="white" depth=".2" height="0.3" width="0.8"></a-box>
+					<a-box id="reply-button" position="1.5 -0.2 0" color="white" depth=".2" height="0.3" width="0.8"></a-box>
 
 				<!-- Audio -->
-				<a-entity id="profile-audio">
-					<a-cylinder id="play" scale="1 1 1" position="1 1 1" rotation="0 180 0"></a-cylinder>
+				<a-entity>
+					<a-cylinder id="play" scale=".2 .2 .2" position="1.666 -0.9 0" rotation="0 -90 -90" material="src:assets/play.png"></a-cylinder>
+					<a-entity text="color:#1BD78E; value: Voice message; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="1.098 -1.357 0" scale="4 4 4" rotation="180 0 180"></a-entity>
 				</a-entity>
 
 			</a-entity>

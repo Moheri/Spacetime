@@ -64,21 +64,48 @@ kugel3.addEventListener('click', function(evt) {
 
 
 /* Button */
-if(document.querySelector("a-marker").object3D.visible == true){
-
-	var texture = new THREE.TextureLoader().load( 'assets/reply-button.png' );
-
-	var materials = [
-	  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // right
-	  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // left
-	  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // top
-	  new THREE.MeshBasicMaterial( { color: 0xffff00 } ), // bottom
-	  new THREE.MeshBasicMaterial( { map: texture } ), // back
-	  new THREE.MeshBasicMaterial( { map: texture } )  // front
-	];
+var mainMarker = document.getElementById("mainMarker");
+mainMarker.addEventListener("markerFound", function(){
+	console.log("model is da")
+}, false);
 
 
-	var replyButton = $("#reply-button")[0];
-	replyButton.getObject3D('mesh').material = new THREE.MultiMaterial(materials);	
-}
+
+	// var texture = new THREE.TextureLoader().load( 'assets/reply-button.png' );
+
+	// var materials = [
+	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // right
+	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // left
+	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // top
+	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // bottom
+	//   new THREE.MeshBasicMaterial( { map: texture } ), // back
+	//   new THREE.MeshBasicMaterial( { map: texture } )  // front
+	// ];
+
+
+	// var replyButton = $("#reply-button")[0];
+	// replyButton.getObject3D('mesh').material = new THREE.MultiMaterial(materials);	
+
+
+
+var audioIsPlaying = false;
+var audio = new Audio('assets/profile-audio.mp3');
+
+var playButton = $("#play")[0];
+playButton.addEventListener('click', function(evt) {
+
+	if(audioIsPlaying == false){
+		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 180 0" class="rotationAni"></a-animation>');
+		audio.play();
+		audioIsPlaying = true;
+	}else{
+		audio.pause();
+		audioIsPlaying = false;
+		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 0 0" class="rotationAni"></a-animation>');
+	}
+
+});
+
+
+
 
