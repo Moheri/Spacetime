@@ -26,7 +26,7 @@
 	<script src="js/vendor/jquery-1.11.2.min.js"></script>
 	<!-- include ar.js -->
 	<script src="js/vendor/aframe/build/aframe-ar.js"></script>
-</head>
+</head>+
 
 <body>
 	<a-scene embedded arjs='patternRatio: 0.7'>
@@ -34,12 +34,14 @@
 			<video id="profile-video" autoplay loop muted>
 				<source src="assets/profile-video.mp4" type="video/mp4" />
 			</video>
-		</a-assets>
+			<audio id="profile-audio">
+				<source src="assets/profile-audio.mp3" type="audio/mpeg">
+				</audio>
+			</a-assets>
 
-		<a-marker-camera cursor="rayOrigin: mouse" preset="custom" type="pattern" url="patterns/8.patt">
+			<a-marker-camera cursor="rayOrigin: mouse" preset="custom" type="pattern" url="patterns/8.patt">
 
-			<a-entity rotation="90 0 180" rounded="width:9.7; height:5; radius: 0.1; color: #132636; opacity:0.8" position="5 -0.867 2.8" anchor="center">
-			</a-entity>
+				<a-entity rotation="90 0 180" rounded="width:9.7; height:5; radius: 0.1; color: #132636; opacity:0.8" position="5 -0.867 2.8" anchor="center"></a-entity>
 				<!-- Fotokugeln -->
 				<a-entity position="-2 0 -0.5" rotation="90 0 180">
 
@@ -59,36 +61,44 @@
 						<a-entity text="color: #1BD78E; value: Kenia; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0 -0.8 0" scale="4 4 4" rotation="180 0 180"></a-entity>
 					</a-entity>
 
-						<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="1.2 0 0">
-							<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
-							repeat="indefinite" easing="linear"></a-animation>
-						</a-sphere>
-						<a-entity text="color:#1BD78E; value: The Alps!; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="1.2 -0.8 0" scale="4 4 4" rotation="180 0 180"></a-entity>
-					</a-entity>
+					<a-sphere color="white" radius="0.5" material="src:assets/beispiel360.jpeg" position="1.2 0 0">
+						<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0"
+						repeat="indefinite" easing="linear"></a-animation>
+					</a-sphere>
+					<a-entity text="color:#1BD78E; value: The Alps!; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="1.2 -0.8 0" scale="4 4 4" rotation="180 0 180"></a-entity>
 				</a-entity>
 
+		<!-- Inhalte -->	
+			<a-entity rotation="90 0 180" position="3.3 0 0">
+
 				<!-- Notiz -->
-				<a-entity rotation="90 0 180" position="3.3 0 0">
-					<a-entity rounded="width:2; height:1; radius: 0.1; color: #0092FF;">
-						<a-entity text="lineHeight: 50; color: white; value: Have a nice day @ \nhome! Miss you! \n<3; anchor: left; align: left;" rotation="180 0 180" position="1.9 0.6 -0.1" font="roboto" scale="4 4 4">
-						</a-entity>
+				<a-entity rounded="width:2; height:1; radius: 0.1; color: #0092FF;">
+					<a-entity text="lineHeight: 50; color: white; value: Have a nice day @ \nhome! Miss you! \n<3; anchor: left; align: left;" rotation="180 0 180" position="1.9 0.6 -0.1" font="roboto" scale="4 4 4">
 					</a-entity>
-					<a-box position="1.5 -0.2 0" color="white" depth=".2" height="0.3" width="0.8" material="src:assets/reply-button.png;"></a-box>
-    				</a-entity>
-    			</a-entity>
+				</a-entity>
+				<a-box position="1.5 -0.2 0" color="white" depth=".2" height="0.3" width="0.8" material="src:assets/reply-button.png;"></a-box>
 
-    <!-- Video -->
-    <a-entity id="profile-video" position="0 0 0" rotation="90 0 180">
-    	<a-video src="#profile-video" width="2" height="3.4" position="0 0 0" ></a-video>
-    </a-entity>
-    <a-entity rotation="90 0 180" position="1.177 -0.167 1.822" rounded="width:2.3; height:3.713; radius: 0.1; color: white;"></a-entity>
-    <a-entity text="color:white; value: Miriam's Feed; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0.019 -0.204 2.603" scale="8 8 8" rotation="-90 0 0"></a-entity>
-</a-entity>
-</a-marker-camera>
+				<!-- Audio -->
+				<a-entity id="profile-audio">
+					<a-cylinder id="play" scale="1 1 1" position="1 1 1" rotation="0 180 0"></a-cylinder>
+				</a-entity>
 
-<!-- CAMERA -->
-<a-entity camera position="0 0 0">
-</a-entity>
+			</a-entity>
+
+
+		<!-- Video -->
+		<a-entity id="profile-video" position="0 0 0" rotation="90 0 180">
+			<a-video src="#profile-video" width="2" height="3.4" position="0 0 0" ></a-video>
+		</a-entity>
+		<a-entity rotation="90 0 180" position="1.177 -0.167 1.822" rounded="width:2.3; height:3.713; radius: 0.1; color: white;"></a-entity>
+		<a-entity text="color:white; value: Miriam's Feed; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0.019 -0.204 2.603" scale="8 8 8" rotation="-90 0 0"></a-entity>
+
+
+	</a-marker-camera>
+
+	<!-- CAMERA -->
+	<a-entity camera position="0 0 0">
+	</a-entity>
 
 </a-scene>
 
