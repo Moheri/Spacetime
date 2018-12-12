@@ -64,10 +64,10 @@ kugel3.addEventListener('click', function(evt) {
 
 
 /* Button */
-var mainMarker = document.getElementById("mainMarker");
-mainMarker.addEventListener("markerFound", function(){
-	console.log("model is da")
-}, false);
+// var mainMarker = document.getElementById("mainMarker");
+// mainMarker.addEventListener("markerFound", function(){
+// 	console.log("model is da")
+// }, false);
 
 
 
@@ -117,8 +117,9 @@ playButton.addEventListener('click', function(evt) {
 
 
 
-verifyMarker() {
+function verifyMarker() {
     //var amarker = this.$refs.amarker; // vuejs
+    console.log("yo")
     var amarker = document.querySelector("#amarker")
     if(amarker.object3D.visible == true) {
         console.log('marker is visible');
@@ -128,7 +129,9 @@ verifyMarker() {
     }
 }
 
-setInterval(verifyMarker, 1000);
+setInterval(function(){ 
+	verifyMarker()
+}, 1000);
 
 
 
