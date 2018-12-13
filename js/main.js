@@ -65,28 +65,51 @@ kugel3.addEventListener('click', function(evt) {
 
 /* Button */
 
-var mainMarker = document.getElementById("mainMarker");
-mainMarker.addEventListener("markerFound", function(){
-	console.log("------------------model is da")
-}, false);
+var materialsLoaded = false;
+
+var marker = document.getElementById("amarker");
+marker.addEventListener("markerFound", (e) => {
+	if(materialsLoaded == false){
+		materialsLoaded = true;
+
+
+
+		/* Reply */
+		var texture = new THREE.TextureLoader().load( 'assets/reply-button.png' );
+		var materials = [
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // right
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // left
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // top
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // bottom
+		  new THREE.MeshBasicMaterial( { map: texture } ), // back
+		  new THREE.MeshBasicMaterial( { map: texture } )  // front
+		];
+		var replyButton = $("#reply-button")[0];
+		replyButton.getObject3D('mesh').material = new THREE.MultiMaterial(materials);	
+
+		/* Play/Pause */
+		var texture2 = new THREE.TextureLoader().load( 'assets/pause.png' );
+		var texture3 = new THREE.TextureLoader().load( 'assets/play.png' );
+		var materials1 = [
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // right
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // left
+		  new THREE.MeshBasicMaterial( { map: texture3 } ), // top
+		  new THREE.MeshBasicMaterial( { map: texture2 } ), // bottom
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // back
+		  new THREE.MeshBasicMaterial( { color: 0x1BD78E } )  // front
+		];
+		var playButton = $("#play")[0];
+		playButton.getObject3D('mesh').material = new THREE.MultiMaterial(materials1);	
+
+
+
+	}
+})
 
 
 
 
-	// var texture = new THREE.TextureLoader().load( 'assets/reply-button.png' );
 
-	// var materials = [
-	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // right
-	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // left
-	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // top
-	//   new THREE.MeshBasicMaterial( { color: 0x1BD78E } ), // bottom
-	//   new THREE.MeshBasicMaterial( { map: texture } ), // back
-	//   new THREE.MeshBasicMaterial( { map: texture } )  // front
-	// ];
-
-
-	// var replyButton = $("#reply-button")[0];
-	// replyButton.getObject3D('mesh').material = new THREE.MultiMaterial(materials);	
 
 
 
@@ -95,7 +118,7 @@ var audio = new Audio('assets/profile-audio.mp3');
 
 var playButton = $("#play")[0];
 playButton.addEventListener('click', function(evt) {
-
+	console.log("play button clicked")
 	if(audioIsPlaying == false){
 		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 90 -90" class="rotationAni"></a-animation>');
 		audio.play();
@@ -107,34 +130,6 @@ playButton.addEventListener('click', function(evt) {
 	}
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-function verifyMarker() {
-    //var amarker = this.$refs.amarker; // vuejs
-    console.log("yo")
-    var amarker = document.querySelector("#amarker")
-    if(amarker.object3D.visible == true) {
-        console.log('marker is visible');
-    }
-    else {
-        console.log('marker is lost');
-    }
-}
-
-setInterval(function(){ 
-	verifyMarker()
-}, 1000);
-
 
 
 

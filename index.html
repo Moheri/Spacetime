@@ -39,8 +39,10 @@
 				</audio>
 			</a-assets>
 
-			<a-marker-camera id="amarker" ref="amarker" cursor="rayOrigin: mouse" preset="custom" type="pattern" url="patterns/1.patt">
+			<a-marker-camera cursor="rayOrigin: mouse">
+			</a-marker-camera>
 
+			<a-marker id="amarker" ref="amarker"  preset="custom" type="pattern" url="patterns/1.patt" >
 				<a-entity rotation="90 0 180" rounded="width:9.7; height:5; radius: 0.1; color: #132636; opacity:0.8" position="5 -0.867 2.8" anchor="center"></a-entity>
 				<!-- Fotokugeln -->
 				<a-entity position="-2 0 -0.5" rotation="90 0 180">
@@ -70,35 +72,33 @@
 
 				</a-entity>
 
-		<!-- Inhalte -->	
-			<a-entity rotation="90 0 180" position="3.3 0 0">
+				<!-- Inhalte -->	
+					<a-entity rotation="90 0 180" position="3.3 0 0">
 
-				<!-- Notiz -->
-				<a-entity rounded="width:2; height:1; radius: 0.1; color: #0092FF;">
-					<a-entity text="lineHeight: 50; color: white; value: Have a nice day @ \nhome! Miss you! \n<3; anchor: left; align: left;" rotation="180 0 180" position="1.9 0.6 -0.1" font="roboto" scale="4 4 4">
+						<!-- Notiz -->
+						<a-entity rounded="width:2; height:1; radius: 0.1; color: #0092FF;">
+							<a-entity text="lineHeight: 50; color: white; value: Have a nice day @ \nhome! Miss you! \n<3; anchor: left; align: left;" rotation="180 0 180" position="1.9 0.6 -0.1" font="roboto" scale="4 4 4">
+							</a-entity>
+
+						</a-entity>
+							<a-box id="reply-button" position="1.5 -0.2 0" color="white" depth=".2" height="0.3" width="0.8"></a-box>
+
+						<!-- Audio -->
+						<a-entity>
+							<a-box id="play" scale=".3 .3 .3" position="1.666 -0.9 0" rotation="0 -90 -90" material="src:assets/play.png"></a-box>
+							<a-entity text="color:#1BD78E; value: Voice message; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="1.098 -1.357 0" scale="4 4 4" rotation="180 0 180"></a-entity>
+						</a-entity>
+
 					</a-entity>
 
+
+				<!-- Video -->
+				<a-entity id="profile-video" position="0 0 0" rotation="90 0 180">
+					<a-video src="#profile-video" width="2" height="3.4" position="0 0 0" ></a-video>
 				</a-entity>
-					<a-box id="reply-button" position="1.5 -0.2 0" color="white" depth=".2" height="0.3" width="0.8"></a-box>
-
-				<!-- Audio -->
-				<a-entity>
-					<a-cylinder id="play" scale=".2 .2 .2" position="1.666 -0.9 0" rotation="0 -90 -90" material="src:assets/play.png"></a-cylinder>
-					<a-entity text="color:#1BD78E; value: Voice message; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="1.098 -1.357 0" scale="4 4 4" rotation="180 0 180"></a-entity>
-				</a-entity>
-
-			</a-entity>
-
-
-		<!-- Video -->
-		<a-entity id="profile-video" position="0 0 0" rotation="90 0 180">
-			<a-video src="#profile-video" width="2" height="3.4" position="0 0 0" ></a-video>
-		</a-entity>
-		<a-entity rotation="90 0 180" position="1.177 -0.167 1.822" rounded="width:2.3; height:3.713; radius: 0.1; color: white;"></a-entity>
-		<a-entity text="color:white; value: Miriam's Feed; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0.019 -0.204 2.603" scale="8 8 8" rotation="-90 0 0"></a-entity>
-
-
-	</a-marker-camera>
+				<a-entity rotation="90 0 180" position="1.177 -0.167 1.822" rounded="width:2.3; height:3.713; radius: 0.1; color: white;"></a-entity>
+				<a-entity text="color:white; value: Miriam's Feed; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Bold.json;" position="0.019 -0.204 2.603" scale="8 8 8" rotation="-90 0 0"></a-entity>
+			</a-marker>
 
 
 </a-scene>
