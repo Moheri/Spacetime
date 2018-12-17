@@ -31,7 +31,7 @@
 <body>
 	<a-scene embedded arjs='patternRatio: 0.7' arjs="debugUIEnabled: false">
 		<a-assets>
-			<video id="profile-video" autoplay loop muted>
+			<video id="profile-video" playsinline autoplay loop muted poster="assets/placeholder.png">
 				<source src="assets/profile-video.mp4" type="video/mp4" />
 			</video>
 			<audio id="profile-audio">
@@ -39,7 +39,7 @@
 				</audio>
 			</a-assets>
 
-			<a-marker-camera cursor="rayOrigin: mouse">
+			<a-marker-camera cursor="fuse: false; rayOrigin: mouse">
 			</a-marker-camera>
 
 			<a-marker id="amarker" ref="amarker"  preset="custom" type="pattern" url="patterns/mother.patt" >

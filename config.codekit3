@@ -60,6 +60,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/placeholder.png": {
+		"ft": 32768,
+		"iS": 1927246,
+		"oA": 0,
+		"oAP": "\/assets\/placeholder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/play.png": {
 		"ft": 32768,
 		"iS": 5478,
@@ -320,6 +331,20 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/patterns\/1.patt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/patterns\/1.patt",
+		"oF": 0
+		},
+	"\/patterns\/1.patt.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/patterns\/1.patt.txt",
+		"oF": 0
 		},
 	"\/patterns\/father.patt": {
 		"cB": 0,

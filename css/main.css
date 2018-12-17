@@ -30,4 +30,4 @@ body {
   display: none; }
 
 #arjsDebugUIContainer {
-  display: none; }
+  display: none!important; }

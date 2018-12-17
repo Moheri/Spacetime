@@ -48,19 +48,16 @@ $("#close").click(function(){
 
 var kugel1 = $("#kugel1")[0];
 kugel1.addEventListener('click', function(evt) {
-	alert();
 	 zoomIn($("#kugel1"));
 });
 
 var kugel2 = $("#kugel2")[0];
 kugel2.addEventListener('click', function(evt) {
-	alert();
 	 zoomIn($("#kugel2"));
 });
 
 var kugel3 = $("#kugel3")[0];
 kugel3.addEventListener('click', function(evt) {
-	alert();
 	 zoomIn($("#kugel3"));
 });
 
@@ -123,13 +120,13 @@ var playButton = $("#play")[0];
 playButton.addEventListener('click', function(evt) {
 	console.log("play button clicked")
 	if(audioIsPlaying == false){
-		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="90 180 180" class="rotationAni"></a-animation>');
+		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 90 -90" class="rotationAni"></a-animation>');
 		audio.play();
 		audioIsPlaying = true;
 	}else{
 		audio.pause();
 		audioIsPlaying = false;
-		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="90 -180 0" class="rotationAni"></a-animation>');
+		$("#play").append('<a-animation attribute="rotation" dur="500" fill="forwards" to="0 -90 -90" class="rotationAni"></a-animation>');
 	}
 
 });
