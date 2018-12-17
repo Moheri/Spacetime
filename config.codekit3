@@ -321,67 +321,25 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"\/patterns\/1.patt": {
+	"\/patterns\/father.patt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/patterns\/1.patt",
+		"oAP": "\/patterns\/father.patt",
 		"oF": 0
 		},
-	"\/patterns\/2.patt": {
+	"\/patterns\/girl.patt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/patterns\/2.patt",
+		"oAP": "\/patterns\/girl.patt",
 		"oF": 0
 		},
-	"\/patterns\/3.patt": {
+	"\/patterns\/mother.patt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/patterns\/3.patt",
-		"oF": 0
-		},
-	"\/patterns\/4.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/4.patt",
-		"oF": 0
-		},
-	"\/patterns\/5.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/5.patt",
-		"oF": 0
-		},
-	"\/patterns\/6.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/6.patt",
-		"oF": 0
-		},
-	"\/patterns\/7.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/7.patt",
-		"oF": 0
-		},
-	"\/patterns\/8.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/8.patt",
-		"oF": 0
-		},
-	"\/patterns\/Icon\r": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/Icon\r",
+		"oAP": "\/patterns\/mother.patt",
 		"oF": 0
 		},
 	"\/prepros-6.config": {
