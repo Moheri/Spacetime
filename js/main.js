@@ -48,16 +48,19 @@ $("#close").click(function(){
 
 var kugel1 = $("#kugel1")[0];
 kugel1.addEventListener('click', function(evt) {
+	alert();
 	 zoomIn($("#kugel1"));
 });
 
 var kugel2 = $("#kugel2")[0];
 kugel2.addEventListener('click', function(evt) {
+	alert();
 	 zoomIn($("#kugel2"));
 });
 
 var kugel3 = $("#kugel3")[0];
 kugel3.addEventListener('click', function(evt) {
+	alert();
 	 zoomIn($("#kugel3"));
 });
 
