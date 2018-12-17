@@ -60,6 +60,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/placeholder.png": {
+		"ft": 32768,
+		"iS": 1927246,
+		"oA": 0,
+		"oAP": "\/assets\/placeholder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/play.png": {
 		"ft": 32768,
 		"iS": 5478,
@@ -328,60 +339,32 @@
 		"oAP": "\/patterns\/1.patt",
 		"oF": 0
 		},
-	"\/patterns\/2.patt": {
+	"\/patterns\/1.patt.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/patterns\/2.patt",
+		"oAP": "\/patterns\/1.patt.txt",
 		"oF": 0
 		},
-	"\/patterns\/3.patt": {
+	"\/patterns\/father.patt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/patterns\/3.patt",
+		"oAP": "\/patterns\/father.patt",
 		"oF": 0
 		},
-	"\/patterns\/4.patt": {
+	"\/patterns\/girl.patt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/patterns\/4.patt",
+		"oAP": "\/patterns\/girl.patt",
 		"oF": 0
 		},
-	"\/patterns\/5.patt": {
+	"\/patterns\/mother.patt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/patterns\/5.patt",
-		"oF": 0
-		},
-	"\/patterns\/6.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/6.patt",
-		"oF": 0
-		},
-	"\/patterns\/7.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/7.patt",
-		"oF": 0
-		},
-	"\/patterns\/8.patt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/8.patt",
-		"oF": 0
-		},
-	"\/patterns\/Icon\r": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/patterns\/Icon\r",
+		"oAP": "\/patterns\/mother.patt",
 		"oF": 0
 		},
 	"\/prepros-6.config": {
